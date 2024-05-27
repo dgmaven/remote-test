@@ -2,9 +2,9 @@
 
 class About {
 
-    public function index()
+    public function index($nama = 'John', $pekerjaan = 'Wrestler')
     {
-        echo 'About/Index';
+        echo "Hello, my name is $nama and I am a $pekerjaan";
     }
     public function page()
     {
