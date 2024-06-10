@@ -10,9 +10,9 @@ class Dashboard extends Controller{
         $this->view('templates/footer');
     }
 
-    public function invoice()
+    public function invoices()
     {
-        $data['title'] = 'Invoice Record';
+        $data['title'] = 'Invoice Records';
         $this->view('templates/header', $data);
         $this->view('dashboard/invoice');
         $this->view('templates/footer');
