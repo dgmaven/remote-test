@@ -17,4 +17,12 @@ class Customers extends Controller{
         $this->view('customers/detail', $data);
         $this->view('templates/footer');
     }
+
+    public function add()
+    {
+        if( $this->model('Customer_model')->addCustomer($_POST) > 0) {
+            header('Location:' . BASEURL . '/customers');
+            exit;
+        }
+    }
 }

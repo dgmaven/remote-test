@@ -22,4 +22,24 @@ class Customer_model{
         $this->db->bind('cust_id', $cust_id);
         return $this->db->single();
     }
+
+    public function addCustomer($data)
+    {
+        $query = "INSERT INTO customers
+                    VALUES
+                    ('', :name , :passport, :address, :country, :phone, :email, :notes)";
+
+        $this->db->query($query);
+        $this->db->bind('name', $data['name']);
+        $this->db->bind('passport', $data['passport']);
+        $this->db->bind('address', $data['address']);
+        $this->db->bind('country', $data['country']);
+        $this->db->bind('phone', $data['phone']);
+        $this->db->bind('email', $data['email']);
+        $this->db->bind('notes', $data['notes']);
+
+        $this->db->execute();
+
+        return $this->db->rowCount();
+    }
 }

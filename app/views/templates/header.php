@@ -22,16 +22,16 @@
                 <a class="nav-link" href="<?= BASEURL;?>/dashboard">Dashboard</a>
                 </li>
                 <li class="nav-item">
-                <a class="nav-link" href="<?= BASEURL;?>/plans">Plan</a>
+                <a class="nav-link" href="<?= BASEURL;?>/items">Items</a>
                 </li>
                 <li class="nav-item">
-                <a class="nav-link" href="<?=BASEURL;?>/customers">Customer</a>
+                <a class="nav-link" href="<?=BASEURL;?>/customers">Customers</a>
                 </li>
                 <li class="nav-item">
-                <a class="nav-link" href="<?= BASEURL;?>/invoices">Invoice</a>
+                <a class="nav-link" href="<?= BASEURL;?>/invoices">Invoices</a>
                 </li>
                 <li class="nav-item">
-                <a class="nav-link" href="<?=BASEURL;?>/agents">Agent</a>
+                <a class="nav-link" href="<?=BASEURL;?>/agents">Agents</a>
                 </li>
             </ul>
             </div>
