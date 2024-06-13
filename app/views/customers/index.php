@@ -1,3 +1,8 @@
+<div class="row mb-2">
+    <div class="col-lg-6">
+    <?php Flasher::flash();?>
+    </div>
+</div>
 <h3 class="mb-4">All Customers</h3>
 
 <!-- Button trigger modal -->
@@ -6,7 +11,7 @@
 </button>
 
 
-<div class="mt-4 col-6">
+<div class="mt-4 col-lg-6">
 <ol class="list-group list-group-numbered">
     <?php foreach($data['customer'] as $customer):?>     
         <li class="list-group-item d-flex justify-content-between align-items-start">

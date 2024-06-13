@@ -23,8 +23,13 @@ class Items extends Controller {
     public function add()
     {
         if( $this->model('Item_model')->addItem($_POST) > 0) {
+            Flasher::setFlash('The item have been','successful', 'added', 'success');
             header('Location:' . BASEURL . '/items');
             exit;
+        } else {
+            Flasher::setFlash('The item is ','failed', 'to be add', 'success');
+            header('Location:' . BASEURL . '/items');
+            
         }
     }
 }

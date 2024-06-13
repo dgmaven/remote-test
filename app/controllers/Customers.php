@@ -21,6 +21,11 @@ class Customers extends Controller{
     public function add()
     {
         if( $this->model('Customer_model')->addCustomer($_POST) > 0) {
+            Flasher::setFlash('New customer data','successful', 'add', 'success');
+            header('Location:' . BASEURL . '/customers');
+            exit;
+        } else {
+            Flasher::setFlash('Something wrong! the customer','failed', 'to be add', 'danger');
             header('Location:' . BASEURL . '/customers');
             exit;
         }

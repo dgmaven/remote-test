@@ -1,3 +1,9 @@
+<div class="row mb-2">
+    <div class="col-lg-6">
+    <?php Flasher::flash();?>
+    </div>
+</div>
+
 <h3 class="mb-4">All Items</h3>
 
 <!-- Button trigger modal -->
