@@ -19,7 +19,8 @@
             <div class="fw-bold"><?= $item['name'];?></div>
             <?= $item['price'];?> 
             </div>
-            <a href="<?=BASEURL;?>/items/detail/<?= $item['item_id'];?>" class="badge text-bg-primary rounded-pill">Detail</a>
+            <a href="<?=BASEURL;?>/items/detail/<?= $item['item_id'];?>" class="mx-2 badge text-bg-primary rounded-pill">Detail</a>
+            <a href="<?=BASEURL;?>/items/delete/<?= $item['item_id'];?>" class="badge text-bg-danger rounded-pill" onclick="return confirm('Confirm delete this item?')">Delete</a>
         </li>
     <?php endforeach; ?>
         

@@ -27,7 +27,20 @@ class Items extends Controller {
             header('Location:' . BASEURL . '/items');
             exit;
         } else {
-            Flasher::setFlash('The item is ','failed', 'to be add', 'success');
+            Flasher::setFlash('The item is ','failed', 'to be add', 'danger');
+            header('Location:' . BASEURL . '/items');
+            
+        }
+    }
+
+    public function delete($id)
+    {
+        if( $this->model('Item_model')->deleteItem($id) > 0) {
+            Flasher::setFlash('The item have been','successful', 'delete', 'success');
+            header('Location:' . BASEURL . '/items');
+            exit;
+        } else {
+            Flasher::setFlash('Item ','failed', 'to be delete', 'danger');
             header('Location:' . BASEURL . '/items');
             
         }

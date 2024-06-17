@@ -42,4 +42,16 @@ class Item_model{
 
         return $this->db->rowCount();
     }
+
+    public function deleteItem($id)
+    {
+        $query = "DELETE FROM items WHERE item_id = :id";
+        $this->db->query($query);
+
+        $this->db->bind('id', $id);
+        
+        $this->db->execute();
+
+        return $this->db->rowCount();
+    }
 }
